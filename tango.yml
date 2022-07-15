@@ -12,4 +12,4 @@ executor:
       secret: BEAKER_TOKEN
 include_package:
   - steps.py
-log_level: debug
+log_level: info
