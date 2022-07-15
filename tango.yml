@@ -1,0 +1,12 @@
+workspace:
+  type: beaker
+  beaker_workspace: ai2/beaker-tango-testing
+executor:
+  type: beaker
+  beaker_workspace: ai2/beaker-tango-testing
+  clusters:
+    - ai2/allennlp-cirrascale
+    - ai2/general-cirrascale
+include_package:
+  - steps.py
+log_level: debug
