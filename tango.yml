@@ -7,6 +7,9 @@ executor:
   clusters:
     - ai2/allennlp-cirrascale
     - ai2/general-cirrascale
+  env_vars:
+    - name: BEAKER_TOKEN
+      secret: BEAKER_TOKEN
 include_package:
   - steps.py
 log_level: debug
