@@ -1,0 +1,3 @@
+{
+  steps: { hello: { type: "hello" } }
+}
