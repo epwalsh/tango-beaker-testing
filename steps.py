@@ -5,7 +5,7 @@ from tango import Step
 class GenerateNameStep(Step):
 
     VERSION = "001"
-    CACHEABLE = False
+    CACHEABLE = True
 
     def run(self, seed: int = 1) -> str:  # type: ignore[override]
         import random
