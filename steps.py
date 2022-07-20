@@ -8,6 +8,9 @@ class GenerateNameStep(Step):
     CACHEABLE = True
 
     def run(self, seed: int = 1) -> str:  # type: ignore[override]
+        if seed == -1:
+            raise ValueError("seed must be non-negative")
+
         import random
 
         random.seed(seed)
