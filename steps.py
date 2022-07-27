@@ -1,6 +1,7 @@
 import random
 
 from tango import Step
+from tango.format import JsonFormat
 
 
 @Step.register("generate-name")
@@ -18,6 +19,7 @@ class HelloStep(Step):
 
     VERSION = "007"
     CACHEABLE = True
+    FORMAT = JsonFormat()
 
     def run(self, name: str) -> str:  # type: ignore[override]
         greeting = f"Hello, {name}!"
