@@ -1,3 +1,5 @@
+import random
+
 from tango import Step
 
 
@@ -8,14 +10,7 @@ class GenerateNameStep(Step):
     CACHEABLE = True
 
     def run(self, seed: int = 1) -> str:  # type: ignore[override]
-        if seed == -1:
-            raise ValueError("seed must be non-negative")
-
-        import random
-
-        random.seed(seed)
-
-        return random.choice(["Billy", "Bob", "Larry", "Randy"])
+        return random.Random(seed).choice(["Billy", "Bob", "Larry", "Randy"])
 
 
 @Step.register("hello")
