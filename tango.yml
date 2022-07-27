@@ -1,14 +1,14 @@
-workspace:
-  type: beaker
-  beaker_workspace: ai2/beaker-tango-testing
-executor:
-  type: beaker
-  beaker_workspace: ai2/beaker-tango-testing
-  # docker_image: ghcr.io/allenai/pytorch:1.12.0-cuda11.3-python3.9
-  # venv_name: base
-  clusters:
-    - ai2/allennlp-cirrascale
-    - ai2/general-cirrascale
+# workspace:
+#   type: beaker
+#   beaker_workspace: ai2/beaker-tango-testing
+# executor:
+#   type: beaker
+#   beaker_workspace: ai2/beaker-tango-testing
+#   # docker_image: ghcr.io/allenai/pytorch:1.12.0-cuda11.3-python3.9
+#   # venv_name: base
+#   clusters:
+#     - ai2/allennlp-cirrascale
+#     - ai2/general-cirrascale
 include_package:
   - steps.py
 log_level: info
