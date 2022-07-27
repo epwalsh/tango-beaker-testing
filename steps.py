@@ -17,9 +17,8 @@ class GenerateNameStep(Step):
 @Step.register("hello")
 class HelloStep(Step):
 
-    VERSION = "007"
+    VERSION = "008"
     CACHEABLE = True
-    FORMAT = JsonFormat()
 
     def run(self, name: str) -> str:  # type: ignore[override]
         greeting = f"Hello, {name}!"
