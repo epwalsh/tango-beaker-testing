@@ -4,7 +4,7 @@ workspace:
 executor:
   type: beaker
   beaker_workspace: ai2/beaker-tango-testing
-  docker_image: ai2/conda
+  docker_image: ghcr.io/allenai/conda:latest
   clusters:
     - ai2/allennlp-cirrascale
     - ai2/general-cirrascale
