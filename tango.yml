@@ -6,8 +6,12 @@ executor:
   beaker_workspace: ai2/beaker-tango-testing
   docker_image: ghcr.io/allenai/conda:latest
   clusters:
-    - ai2/allennlp-cirrascale
-    - ai2/general-cirrascale
+    - "ai2/allennlp-cirrascale"
+    - "ai2/general-cirrascale"
+    - "ai2/aristo-cirrascale"
+    - "ai2/mosaic-cirrascale"
+    - "ai2/mosaic-cirrascale-a100"
+    - "ai2/s2-cirrascale"
 include_package:
   - steps.py
 log_level: info
