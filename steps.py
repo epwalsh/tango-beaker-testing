@@ -1,30 +1,20 @@
-from tango import Step
+import random
+
+from tango import step
+
+VERSION = "010"
 
 
-@Step.register("generate-name")
-class GenerateNameStep(Step):
-
-    VERSION = "001"
-    CACHEABLE = True
-
-    def run(self, seed: int = 1) -> str:  # type: ignore[override]
-        if seed == -1:
-            raise ValueError("seed must be non-negative")
-
-        import random
-
-        random.seed(seed)
-
-        return random.choice(["Billy", "Bob", "Larry", "Randy"])
+@step(version=VERSION)
+def generate_name(seed: int = 1) -> str:
+    if seed == -1:
+        raise ValueError("seed must be non-negative")
+    random.seed(seed)
+    return random.choice(["Billy", "Bob", "Larry", "Randy"])
 
 
-@Step.register("hello")
-class HelloStep(Step):
-
-    VERSION = "007"
-    CACHEABLE = True
-
-    def run(self, name: str) -> str:  # type: ignore[override]
-        greeting = f"Hello, {name}!"
-        self.logger.info(greeting)
-        return greeting
+@step(bind=True, version=VERSION)
+def hello(self, name: str) -> str:
+    greeting = f"Hello, {name}!"
+    self.logger.info(greeting)
+    return greeting
