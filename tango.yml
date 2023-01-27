@@ -1,10 +1,11 @@
 workspace:
   type: beaker
-  beaker_workspace: ai2/beaker-tango-testing
+  beaker_workspace: ai2/petew-testing
 executor:
   type: beaker
-  beaker_workspace: ai2/beaker-tango-testing
+  beaker_workspace: ai2/petew-testing
   docker_image: ghcr.io/allenai/conda:latest
+  priority: preemptible
   clusters:
     - "ai2/allennlp-cirrascale"
     - "ai2/general-cirrascale"
