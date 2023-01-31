@@ -2,7 +2,7 @@ import random
 
 from tango import step
 
-VERSION = "010"
+VERSION = "011"
 
 
 @step(version=VERSION)

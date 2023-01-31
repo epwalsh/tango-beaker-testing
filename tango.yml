@@ -1,18 +1,18 @@
 workspace:
   type: beaker
   beaker_workspace: ai2/petew-testing
-executor:
-  type: beaker
-  beaker_workspace: ai2/petew-testing
-  docker_image: ghcr.io/allenai/conda:latest
-  priority: preemptible
-  clusters:
-    - "ai2/allennlp-cirrascale"
-    - "ai2/general-cirrascale"
-    - "ai2/aristo-cirrascale"
-    - "ai2/mosaic-cirrascale"
-    - "ai2/mosaic-cirrascale-a100"
-    - "ai2/s2-cirrascale"
+# executor:
+#   type: beaker
+#   beaker_workspace: ai2/petew-testing
+#   docker_image: ghcr.io/allenai/conda:latest
+#   priority: preemptible
+#   clusters:
+#     - "ai2/allennlp-cirrascale"
+#     - "ai2/general-cirrascale"
+#     - "ai2/aristo-cirrascale"
+#     - "ai2/mosaic-cirrascale"
+#     - "ai2/mosaic-cirrascale-a100"
+#     - "ai2/s2-cirrascale"
 include_package:
   - steps.py
 log_level: info
